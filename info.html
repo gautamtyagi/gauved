@@ -1,0 +1,53 @@
+
+
+
+
+<?php if($found){ ?>
+
+
+
+
+<table id="dataTableDept" class="display" cellspacing="0" width="100%"style="margin-top: 30px;">
+
+    <thead>
+    <tr>
+
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll No.</th>
+        <th>Course</th>
+        <th>Branch</th>
+        <th>Sem</th>
+
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <?php
+        foreach($employees as $employee){
+        ?>
+
+    <tr>
+        <td>{{$employee->id}}</td>
+        <td>{{$employee->name}}</td>
+        <td>{{$employee->roll_no}}</td>
+        <td>{{$employee->branch}}</td>
+        <td>{{$employee->course}}</td>
+        <td>{{$employee->sem}}</td>
+
+
+    </tr>
+
+
+    <?php
+        }
+        ?>
+
+    </tbody>
+</table>
+
+<?php
+} else{ echo "No tenders to show..."; }
+?>
